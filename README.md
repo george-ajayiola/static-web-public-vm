@@ -13,6 +13,8 @@ The infrastructure consists of:
 - Azure Front Door service to provide a frontend to the VM Public IP
 - A bash script hosted on Azure Blob Storage to automatically install and configure Nginx on the VM
 
+  ![Archi](INF_Screenshots/Archi.drawio.png)
+
 ## Prerequisites
 
 - An Azure account
