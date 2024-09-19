@@ -68,7 +68,7 @@ After configuring the Terraform files, run the following commands:
   ![apply_tf](INF_Screenshots/resultofterraform_apply.png)
   *Figure 6: Terraform config result.*
   
-## 4. Access the Static Website
+## 3. Access the Static Website
 
 Once Terraform completes the process, the public IP of the VM will be available in the output. Open the browser and navigate to the public IP to access the static website served by Nginx.
 
@@ -82,7 +82,7 @@ Once Terraform completes the process, the public IP of the VM will be available 
 *Figure 8: Website access from VM IP.*
 
 
-## 5. Azure Front Door Configuration
+## 4. Azure Front Door Configuration
 
 Azure Front Door will be set up to front the public IP of the VM, allowing traffic management and enhanced security for the static website.
 
