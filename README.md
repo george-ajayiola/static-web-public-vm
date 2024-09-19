@@ -86,7 +86,14 @@ Once Terraform completes the process, the public IP of the VM will be available 
 
 Azure Front Door will be set up to front the public IP of the VM, allowing traffic management and enhanced security for the static website.
 
+![afd1](INF_Screenshots/frontend_afd.png)
+
+*Figure 8: Azure Front Door frontend endpoint.*
+
 ![afd](INF_Screenshots/AFD.png)
 
-*Figure 8: Website access from Azure Front Door .*
+*Figure 9: Website access from Azure Front Door .*
+
+
+
 
