@@ -25,7 +25,24 @@ The infrastructure consists of:
 
 First, create an Azure storage account and a blob container. Upload a bash script to the container, which will install Nginx on the virtual machine. This script is retrieved during VM provisioning.
 
+![Storage Account Setup](INF_Screenshots/storage_account.png)
+              *Figure 1: Creating a Storage Account on Azure (LRS) .*
+
+
+
+![Storage Account Setup1](INF_Screenshots/storage_account1.png)
+*Figure 2: Creating a Container in Storage Account .*
+
+
+![Storage Account Setup2](INF_Screenshots/storage_account2.png)
+
+*Figure 3: Bash file upload .*
+
 Once the script is uploaded, generate a Shared Access Signature (SAS) URI for the file to grant Terraform temporary access.
+
+![Storage Account Setup3](INF_Screenshots/SAS.png)
+*Figure 4: Generate SAS.*
+
 
 ### 2. Terraform Configuration
 
