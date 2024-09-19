@@ -38,7 +38,7 @@ First, create an Azure storage account and a blob container. Upload a bash scrip
 
 *Figure 3: Bash file upload .*
 
-Once the script is uploaded, generate a Shared Access Signature (SAS) URI for the file to grant Terraform temporary access.
+Once the script is uploaded, generate a Shared Access Signature (SAS) URI for the file to grant Terraform temporary access to the file.
 
 ![Storage Account Setup3](INF_Screenshots/SAS.png)
 *Figure 4: Generate SAS.*
