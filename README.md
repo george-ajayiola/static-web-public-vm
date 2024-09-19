@@ -9,11 +9,14 @@ The infrastructure consists of:
 - A Virtual Network (VNet) with a Subnet
 - A Network Interface connected to the subnet
 - A Virtual Machine provisioned with a Public IP
+- A bash script hosted on Azure Blob Storage to automatically install and configure Nginx on the VM
 - A Network Security Group (NSG) allowing HTTP (port 80) traffic
 - Azure Front Door service to provide a frontend to the VM Public IP
-- A bash script hosted on Azure Blob Storage to automatically install and configure Nginx on the VM
+
 
   ![Archi](INF_Screenshots/Archi.drawio.png)
+
+   *Figure 1: Architecture .*
 
 ## Prerequisites
 
@@ -28,22 +31,22 @@ The infrastructure consists of:
 First, create an Azure storage account and a blob container. Upload a bash script to the container, which will install Nginx on the virtual machine. This script is retrieved during VM provisioning.
 
 ![Storage Account Setup](INF_Screenshots/storage_account.png)
-              *Figure 1: Creating a Storage Account on Azure (LRS) .*
+              *Figure 2: Creating a Storage Account on Azure (LRS) .*
 
 
 
 ![Storage Account Setup1](INF_Screenshots/storage_account1.png)
-*Figure 2: Creating a Container in Storage Account .*
+*Figure 3: Creating a Container in Storage Account .*
 
 
 ![Storage Account Setup2](INF_Screenshots/storage_account2.png)
 
-*Figure 3: Bash file upload .*
+*Figure 4: Bash file upload .*
 
 Once the script is uploaded, generate a Shared Access Signature (SAS) URI for the file to grant Terraform temporary access to the file.
 
 ![Storage Account Setup3](INF_Screenshots/SAS.png)
-*Figure 4: Generate SAS.*
+*Figure 5: Generate SAS.*
 
 
 ### 2. Terraform Configuration
@@ -65,10 +68,10 @@ After configuring the Terraform files, run the following commands:
 - ``terraform apply``
   
   ![apply_tf1](INF_Screenshots/apply.png)
-  *Figure 5: Terraform apply complete.*
+  *Figure 6: Terraform apply complete.*
 
   ![apply_tf](INF_Screenshots/resultofterraform_apply.png)
-  *Figure 6: Terraform config result.*
+  *Figure 7: Terraform config result.*
   
 ## 3. Access the Static Website
 
@@ -76,12 +79,12 @@ Once Terraform completes the process, the public IP of the VM will be available 
 
 
 ![apply_tf3](INF_Screenshots/vm.png)
-*Figure 7: VM IP.*
+*Figure 8: VM IP.*
   
 
 
 ![apply_tf4](INF_Screenshots/vm_ip.png)
-*Figure 8: Website access from VM IP.*
+*Figure 9: Website access from VM IP.*
 
 
 ## 4. Azure Front Door Configuration
@@ -90,11 +93,11 @@ Azure Front Door will be set up to front the public IP of the VM, allowing traff
 
 ![afd1](INF_Screenshots/frontend_afd.png)
 
-*Figure 8: Azure Front Door frontend endpoint.*
+*Figure 10: Azure Front Door frontend endpoint.*
 
 ![afd](INF_Screenshots/AFD.png)
 
-*Figure 9: Website access from Azure Front Door .*
+*Figure 11: Website access from Azure Front Door .*
 
 
 
