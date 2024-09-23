@@ -28,7 +28,7 @@ The infrastructure consists of:
 
 ### 1. Creating Storage Account and Uploading Script
 
-First, create an Azure storage account and a blob container. Upload a bash script to the container, which will install Nginx on the virtual machine. This script is retrieved during VM provisioning.
+First, create an Azure storage account and a blob container. Upload a bash script to the container, which will install Nginx on the virtual machine. This script is retrieved after the VM is provisioned to perform the post-deployment task of running the custom script.
 
 ![Storage Account Setup](INF_Screenshots/storage_account.png)
               *Figure 2: Creating a Storage Account on Azure (LRS) .*
