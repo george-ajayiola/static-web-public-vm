@@ -52,7 +52,7 @@ resource "azurerm_frontdoor" "main" {
   }
 
    depends_on = [
-    azurerm_virtual_machine.main,  # VM dependency
-    azurerm_public_ip.publicip          # Public IP dependency
+    azurerm_linux_virtual_machine.main, 
+    azurerm_public_ip.publicip          
   ]
 }
