@@ -1,6 +1,6 @@
 # Static Website Deployment on Azure Virtual Machine using Terraform
 
-This repository contains documentation for deploying a static website on an Azure Virtual Machine (VM). The infrastructure is created using Infrastructure as Code (IaC) with Terraform, the website is served using the Nginx web server installed via a custom bash script on the VM and a CDN solution (Front Door) is used to front the public IP of the virtual machine..
+This repository contains my documentation for deploying a static website on an Azure Virtual Machine (VM). The infrastructure is created using Infrastructure as Code (IaC) with Terraform, the website is served using the Nginx web server installed via a custom bash script on the VM and a CDN solution (Front Door) is used to front the public IP of the virtual machine..
 
 ## Architecture Overview
 
