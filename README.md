@@ -28,7 +28,7 @@ The infrastructure consists of:
 
 ### 1. Terraform Configuration
 
-The Terraform code is split into the following files for better modularity and readability:
+The Terraform code is split into the following files:
 
 - **provider.tf**: Specifies the Azure provider for Terraform.
 - **resource_group.tf**: To use the resource group where all resources will reside.
