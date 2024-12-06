@@ -22,7 +22,7 @@ The infrastructure consists of:
 
 - An Azure account
 - Terraform installed on your machine
-- Bash script for Nginx installation 
+- Bash script for Nginx web server installation 
 
 ## Step-by-Step Process
 
